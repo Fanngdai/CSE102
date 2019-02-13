@@ -1,20 +1,186 @@
-<!-- Introductory Statement - The Web page should have an introductory paragraph that draws in the Web surfer to the site.
-Ordered List - The Web page should use at least one ordered list. You may use it for whatever purpose you like, but it must make sense and fit in with the point of the Web site.
-Unordered List - The Web page should use at least one unordered list. Again, don't just throw one in, it should be there for good reason.
-
-Images - The Web page should make use of at least 3 images. These may be images of inside, outside, whatever, as long as they are relevant to the page.
-
-Quotations - The Web page should contain at least one quote from a reviewer. For these, you must use the blockquote tag.
-Hyperlinked References - The Web page should contain a list of references with hyperlinks to each reference. You should also include inline hyperlinks to any proper nouns in your page. All together you should have at least 10 hyperlinks in your page.
-Author & Date of last revision - Include this information at the bottom of your Web page. For the Date of last revision, I have provided a JavaScript snippet that you may simply copy and paste into the body of your document: -->
-
-
 <html>
 <head>
     <title> Bubble Tea </title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 10px 10px 10px 10px;
+            background-color:#C1C8E4;
+            color:#5680E9;
+            font-family: Apple Chancery, cursive;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            color:#8860D0;
+        }
+
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            color:#8860D0;
+        }
+
+        img {
+            max-height: 300px;
+            max-width: 250px;
+        }
+
+        a:link, a:visited, a:active {
+            border-bottom: 1px dashed;
+            color:#5680E9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #8860D0;
+            text-shadow: 0.5px 0.5px;
+            cursor: pointer;
+            border-bottom: none;
+        }
+
+        .row {
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            max-width: 100%;
+            padding: 0.5rem;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .row .col {
+            width: 33.33333333%;
+            text-align: center;
+        }
+
+        /* Auto align col-n to left in fluid-container */
+        .fluid-container{
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        /* Auto align col-n to middle in fluid-container */
+        .fluid-container{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Auto align col-n to right in fluid-container */
+        .fluid-container{
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        /* Use in parent div of fluid col */
+        .fluid-container {
+            display: flex;
+            overflow: auto;
+        }
+
+        /* Wrap controls instead on overflow */
+        .fluid-container.wrap {
+            -webkit-align-items: center;
+            align-items: center;
+            display: flex;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            -ms-flex-align: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        /* Resizes elements in a row equally given the number of elements located in it */
+        .fluid-container .col-fluid {
+            display: block;
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -ms-flex-negative: 1;
+            flex-shrink: 1;
+        }
+
+        /* No expansion for specific col-fluid columns */
+        .fluid-container .col-fluid.no-flex {
+            flex-grow: 0;
+            flex-shrink: 0;
+            -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+            -ms-flex-negative: 0;
+        }
+
+        /* Some offset values */
+        .row [class^="col-"],
+        .row [class*=" col-"] {
+            float: left; /* Keeps the elements in 1 row */
+            padding: 0 0.5rem;
+        }
+
+        /* Columns without the spacing */
+        .row [class^="col-"].no-space,
+        .row [class*=" col-"].no-space {
+            padding: 0;
+        }
+
+        /* Ignore overflow in columns */
+        .row.expand {
+            -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            overflow-x: auto; /* Can be disabled to remove scroll bar */
+        }
+
+        /* Only for divs with .expand so they can go past the parent div width */
+        .row.expand [class^="col-"],
+        .row.expand [class*=" col-"] {
+            -webkit-flex: none;
+            -ms-flex: none;
+            flex: none;
+        }
+
+        /* Used for aligning controls next to each other */
+        .row.has-controls {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+
+        /* MOBILE */
+        @media screen and (max-width: 768px) {
+            .row {
+                margin-top: 0;
+            }
+
+            .row [class^="col"]:not(.ignore-screen),
+            .row [class*=" col"]:not(.ignore-screen) {
+                /* Remove the grid structure for smaller screens */
+                width: 100%;
+                margin-top: 1rem;
+                margin-left: 0;
+            }
+
+            /* Increase space with cards */
+            .fluid-container [class^="col"]:not(.ignore-screen),
+            .row [class*=" col"]:not(.ignore-screen) {
+                margin-top: 1rem;
+            }
+
+            .fluid-container {
+                display: inherit;
+            }
+        }
+    </style>
 </head>
 
-<body style="background-color:black; color:red" >
+<body>
     <h1> Bubble Tea </h1>
     <p>
         One may say that you are missing out if you never tried bubble tea. The traditional bubble tea
@@ -26,6 +192,8 @@ Author & Date of last revision - Include this information at the bottom of your 
         ranked with their best tasting drinks!
     </p>
     
+    <blockquote><a href="https://www.women.com/ashleylocke/lists/bubble-tea-instagram-captions-071218">"There's always time for bubble tea." -Unknown</a></blockquote>
+
     <h3>Best Bubble Tea Shops</h3>
     <ol>
         <li><a href="yifangteausa.com">Yi Fang Taiwan Fruit Tea</a></li>
@@ -81,11 +249,17 @@ Author & Date of last revision - Include this information at the bottom of your 
         <li><a href="">Comebuy</a></li>
     </ol>
     
-    <img src="https://previews.123rf.com/images/foodandmore/foodandmore1206/foodandmore120600173/14168015-various-bubble-tea-in-a-row-isolated-on-white-background.jpg">
-    <img src="https://media-cdn.tripadvisor.com/media/photo-s/14/a5/9a/49/photo0jpg.jpg">
-    <img src="https://s3-media2.fl.yelpcdn.com/bphoto/kY6Ua9pgHpEULs0QSuJgbQ/o.jpg">
-
-    <a href="https://www.women.com/ashleylocke/lists/bubble-tea-instagram-captions-071218"><blockquote>"There's always time for bubble tea." -Unknown</blockquote></a>
+    <div class="row fluid-container">
+        <div class="col">
+            <img src="https://previews.123rf.com/images/foodandmore/foodandmore1206/foodandmore120600173/14168015-various-bubble-tea-in-a-row-isolated-on-white-background.jpg" alt="Bubble Teas">
+        </div>
+        <div class="col">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/14/a5/9a/49/photo0jpg.jpg" alt="Bubble Tea Store">
+        </div>
+        <div class="col">
+            <img src="https://s3-media2.fl.yelpcdn.com/bphoto/kY6Ua9pgHpEULs0QSuJgbQ/o.jpg" alt="Bubble Tea Description">
+        </div>
+    </div>
     
     <p style="text-align:center">
         &copy; <a href="fannydai.me">Fanng Dai</a>
