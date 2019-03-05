@@ -1,0 +1,31 @@
+body {
+    background-color:#CAFAFE;
+    color: #55BCC9;
+    font-family: serif;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+h1 {
+    color: #97CAEF;
+}
+
+h2 {
+    color: #3FEEE6;
+}
+
+p {
+    color: #383838;
+}
+
+hr {
+    color: #FC4445;
+}
+
+.class1 {
+    color: #FFFFFF;
+}
+
+#id1 {
+    text-decoration: underline;
+}
