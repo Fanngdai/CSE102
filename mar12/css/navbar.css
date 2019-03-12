@@ -1,0 +1,108 @@
+body{
+	text-align: center;
+}
+
+/* FIRST NAV BAR */
+div.navbar{	
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+
+div.navbar   a:link{	
+	padding: 3px;
+	color: #300;
+	text-decoration: none;
+}
+
+div.navbar   a:hover{	
+	background-color: #eb0;
+	color: #200;
+	padding: 3px;
+	text-decoration: none;
+}
+
+/* SECOND NAV BAR */
+div.navbar2{	
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+
+div.navbar2    a:visited,
+div.navbar2    a:active,
+div.navbar2    a:link{	
+	padding: 3px;
+	color: #300;
+	border-left: thin #000 solid;
+	text-decoration: none;
+}
+
+div.navbar2    a:hover{	
+	background-color: #eb0;
+	color: #200;
+	padding: 3px;
+	border-top: thin #000 solid;
+	border-bottom:thin #000 solid;
+	text-decoration: none;
+}
+
+/* THIRD NAV BAR */
+div.navbar3{	
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+
+div.navbar3    a:visited,
+div.navbar3    a:active,
+div.navbar3    a:link{	
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #eb0;
+	color: #200;
+	padding: 2px;
+	border-width: 3px;             /* border : 3px  outset  #eb0 */
+	border-style: outset;
+	border-color: #eb0;
+}
+
+div.navbar3    a:hover{	
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #eb0;
+	color: #200;
+	padding: 2px;
+	border-width: 3px;             /* border : 3px  outset  #eb0 */
+	border-style: inset;
+	border-color: #eb0;
+}
+
+/* FOURTH NAV BAR */
+div.navbar4{
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+
+div.navbar4    a:visited,
+div.navbar4    a:active,
+div.navbar4    a:link{	
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #eb0;
+	color: #200;
+	padding: 2px;
+	border-width: 3px;             /* border : 3px  outset  #eb0 */
+	border-style: outset;
+	border-color: #eb0;
+	display: block;
+	width: 200px;
+}
+
+div.navbar4    a:hover{	
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #eb0;
+	color: #200;
+	padding: 2px;
+	border-width: 3px;             /* border : 3px  outset  #eb0 */
+	border-style: inset;
+	border-color: #eb0;
+}
