@@ -1,0 +1,143 @@
+body{
+    margin-left: 5em;
+    margin-right: 5em;
+    
+    background-color:#B9D8D8;
+    color: #44525E;
+    font-family: "Times New Roman", Times, serif;
+}
+div, h1{
+    text-align: center;
+    font-family: "Avenir Next", Helvetica;
+    clear: both;
+}
+p{
+    font-family: "Avenir Next", Helvetica;
+} 
+a{
+    color: #966C97;
+    text-decoration: none;
+}
+img{
+    border-radius: 5px;
+}
+hr{
+    clear: both;
+    margin-top: 1rem;
+}
+
+/* Left for paragraph. Right for table. */
+.left{
+    width: 22%;
+    float: left;
+    direction: row;
+    padding-right: 3%;
+}
+.right{
+    width: 75%;
+    float: right;
+    direction: row;
+}
+
+/* description left & right */
+.negleft{
+    width: 75%;
+    float: left;
+    direction: row;
+}
+.negright{
+    width: 24%;
+    float: right;
+    direction: row;
+    padding-left: 1%;
+}
+
+/* TABLE */
+table{
+    border: 1px solid #3E3E3E;
+    font-family: "Times New Roman", Times, serif;
+    border-radius: 25px;
+}
+table tr td:first-line{
+    font-weight: bold;
+    text-decoration: underline;
+}
+table tr{
+    text-align: center;
+}
+td {
+    /* border: 1px solid #3E3E3E; */
+    padding: 20px;
+    vertical-align: top;
+}
+td a img{
+    height: 145px;
+    width: 145px;
+}
+td a img:hover{
+    opacity: 0.5;
+}
+
+/* Responsive */
+/* @media only screen and (max-width: 900px) {
+    p{
+        width: 100%;
+    } 
+    table{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    body{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    td a img{
+        height: 150px;
+        width: 150px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    body{
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+} */
+
+
+
+
+/* 
+Midterm material
+list ordered list
+nested list - no abc but will have 123
+text decoration - none = navbar no underline
+
+Give you a list & will tell you to write the code for it
+
+inline vs block elements
+block - div & paragraph
+inline - span a
+
+relative urls
+put this image from certain folder
+./ ../ /
+
+singular tags - br hr img
+
+core attribute
+style class id title tooltips
+
+Keyword & definition & match them
+
+simple css
+simple class .
+simple id #
+for div/paragraph
+    background margin
+for visited link & unvisited link
+
+table
+    Write the code for it
+    merge 2 rows & such
+*/

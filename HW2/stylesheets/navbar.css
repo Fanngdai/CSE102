@@ -1,0 +1,79 @@
+nav {
+    max-width: 80%;
+    /* Center the entire nav bar*/
+    margin: 0 auto;
+    /* Away from the top */
+    padding: 20px 0;
+}
+
+nav h1{
+  color: #966C97;
+  font-weight: bold;
+  font-size: 30px;
+}
+  
+nav ul {
+  text-align: center;
+  /* Make it look like it's popping out */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  /* Make it look like it's next to each other rather than bullet points */
+  display: inline-block;
+}
+
+nav ul li a {
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: #BC88BD;
+  font-size: 100%;
+  /* Remove underline for link */
+  text-decoration: none;
+  /* For height of nav bar */
+  display: block;
+  padding: 18px;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  color: #966C97;
+} 
+
+  
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  nav {
+    max-width: 960px;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  nav {
+    max-width: 960px;
+  }
+}
