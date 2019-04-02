@@ -92,7 +92,7 @@ div.navbar4    a:link{
 	border-width: 3px;             /* border : 3px  outset  #eb0 */
 	border-style: outset;
 	border-color: #eb0;
-	/* display: block; */
+	display: block;
 	width: 200px;
 }
 

@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0123)https://blackboard.stonybrook.edu/bbcswebdav/pid-4792530-dt-content-rid-34870326_1/courses/1194-CSE-102-SEC01-54102/hw4.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CSE/ISE 102 - Homework 4</title>
+
+  <meta name="title" content="CSE/ISE 102 - Homework 4 ">
+  <meta name="description" content="CSE/ISE 102 - Homework 4 ">
+  <meta content="text/css">
+  
+
+ <style> 
+  
+ /* The W3C Core Styles Copyright (c) 1998 W3C (mit, inria, Keio), All Rights
+Reserved. W3C liability, trademark, document use and software licensing rules
+apply. See http://www.w3.org/Consortium/Legal/ipr-notice.html
+
+This stylesheet has been served in a form to avoid known bugs in your user
+agent's css implementation. Copying and serving this stylesheet to other
+agents may lead to unexpected results. Please refer to its address rather than
+copy it. */
+
+
+
+
+
+	/* begin body type */	/* 1 - humanist sans a */
+
+body	{	
+	font-size:	1em;
+	font-weight:	normal;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Verdana, Myriad Web, Syntax, sans-serif;
+	font-size-adjust:	.58;
+	}	
+
+p, blockquote, ul, ol, dl, dd, li, dir, menu	{	
+	/* inherit from body */	
+	}	
+
+small	{	
+	font-size:	.92em;
+	}	
+
+big	{	
+	font-size:	1.17em;
+	}	
+
+pre	{	
+	font-family:	'Monotype.com', Courier New, monospace;
+	}	
+
+ol li	{	
+	list-style-type:	decimal;
+	}	
+
+ol ol li	{	
+	list-style-type:	lower-alpha;
+	}	
+
+ol ol ol li	{	
+	list-style-type:	lower-roman;
+	}	
+
+table, tbody, tr, td	{	
+	font-size:	1em;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Verdana, Myriad Web, Syntax, sans-serif;
+	font-size-adjust:	.58;
+	}	
+
+	/* end body type */	
+
+
+
+
+	/* begin header type */	/* 2 - serif a */
+		
+h1	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	2.0em;
+	font-weight:	600;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h2	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.75em;
+	font-weight:	500;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h3	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.58em;
+	font-weight:	600;
+	font-style:	italic;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h4	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.33em;
+	font-weight:	600;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h5, dt	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.17em;
+	font-weight:	600;
+	font-style:	italic;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h6	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1em;
+	font-weight:	700;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	.1em;
+	font-variant:	small-caps
+	}	
+		
+tfoot, thead	{	
+	font-size:	1em;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	}	
+		
+th	{	
+	vertical-align:	baseline;
+	font-size:	1em;
+	font-weight:	bold;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	}	
+		
+hr	{	
+	visibility:	visible;
+	}	
+		
+	/* end header type */	
+
+
+
+
+	/* begin affordances */	/* 7 - rubric */
+		
+a, address, blockquote, body, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, big, center, dir, font, hr, menu, pre,		
+abbr, acronym, bdo, button, fieldset, ins, label	{	
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	text-decoration:	none;
+	border-color:	#999;
+	border-style:	none;
+	}	
+		
+body	{	
+	color:	black;
+	background:	#fffff5;
+	}	
+		
+em	{	
+	font-style:	normal;
+	font-weight:	bold;
+	color:	black;
+	background:	#fffff5;
+	}	
+		
+strong	{	
+	font-style:	italic;
+	background:	#fffff5;
+	font-weight:	bold;
+	color:	black;
+	}	
+		
+em strong, strong em	{	
+	text-transform:	uppercase;
+	font-style:	normal;
+	font-weight:	bolder;
+	background:	#fffff5;
+	color:	black;
+	}	
+		
+b	{
+	font-weight:	bold;
+	}
+	
+i	{
+	font-style:	italic;
+	}
+		
+.warning	{	
+	text-transform:	none;
+	font-style:	normal;
+	font-weight:	bolder;
+	background:	#FF0;
+	color:	red;
+	}	
+		
+del	{	
+	text-decoration:	line-through;
+	background:	#fc6;
+	}	
+		
+ins	{	
+	text-decoration:	none;
+	background:	#9F3;
+	}	
+		
+var, cite, dfn, .note	{	
+	font-style:	italic;
+	}	
+		
+address	{	
+	font-style:	normal;
+	letter-spacing:	.1em;
+	}	
+		
+acronym	{	
+	font-variant:	small-caps;
+	letter-spacing:	0.1em;
+	}	
+		
+h1, h2, h3, h4, h5, h6, dt, th, thead, tfoot	{	
+	color:	#C00;
+	background:	#fffff5;
+	}	
+		
+hr	{	
+	color:	black;
+	}	
+		
+#colophon	{	
+	display:	none;
+	}	
+		
+col, colgroup, table, tbody, td, tr	{	
+	color:	black;
+	text-decoration:	none;
+	border-color:	black;
+	border-style:	none;
+	background:	#fffff5;
+	}	
+		
+a:link	{	
+	text-decoration:	none;
+	font-weight:	bold; 
+	color:	#33F;
+	background:	#fffff5;
+	}	
+		
+a:visited	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	#93C;
+	background:	#fffff5;
+	}	
+		
+a:active	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	black;
+	background:	#ccf;
+	}	
+		
+a:hover	{	
+	text-decoration:	none;
+	color:	#fffff5;
+	background:	#33F;
+	}	
+		
+a.offsite	{	
+	text-decoration:	none;
+	font-weight:	normal;
+	color:	#33F;
+	background:	#fffff5;
+	}	
+		
+	/* end affordances */	
+
+
+
+
+	/* begin vertical */	/* 1 - pentatonic a */
+		
+a, address, blockquote, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, b, big, center, dir, font, hr, i, menu, pre, s, strike, tt,		
+u, abbr, acronym, bdo, button, fieldset, ins, label	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	vertical-align:	baseline;
+	}	
+		
+body	{	
+	line-height:	1.58em;
+	}	
+		
+div > p:first-child, body > p:first-child, td > p:first-child	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, div + p, p.initial	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h1, h2, h3, h4, h5, h6	{	
+	line-height:	1.33em;
+	}	
+		
+h1	{	
+	margin-top:	1.33em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h2	{	
+	margin-top:	1.75em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h3	{	
+	margin-top:	1.58em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h4	{	
+	margin-top:	1.33em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h5	{	
+	margin-top:	1.17em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h6	{	
+	margin-top:	1em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+p	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+blockquote, fieldset, form, ul, ol, dl, dir, menu	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+dt	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+dd	{	
+	margin-top:	0;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+ul ul, ol ol, li address, li dl, li ol, li p, li ul, li dir, li hr, li menu, li pre, li h1, li h2, li h3, li h4, li h5, li h6, dd address, dd dl, dd ol, dd p, dd ul, dd dir, dd hr, dd menu, dd pre, dd h1, dd h2, dd h3, dd h4, dd h5, dd h6	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+li	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+address	{	
+	margin-top:	1.58em;
+	margin-bottom:	1.58em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+pre	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	line-height:	1.25em;
+	}	
+		
+hr	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	height:	1px;
+	}	
+		
+div, center	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+.subhead	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+.stb	{	
+	margin-top:	2.17em;
+	margin-bottom:	.75em;
+	padding-top:	2.17em;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	border-style:	solid
+	}	
+		
+.mtb	{	
+	margin-top:	3.08em;
+	margin-bottom:	.75em;
+	padding-top:	3.08em;
+	padding-bottom:	0;
+	border-top:	.1em;
+	border-bottom:	0;
+	border-style:	solid
+	}	
+		
+.ltb	{	
+	margin-top:	4.34em;
+	margin-bottom:	.75em;
+	padding-top:	4.34em;
+	padding-bottom:	0;
+	border-top:	.25em;
+	border-bottom:	0;
+	border-style:	solid
+	}	
+		
+col, colgroup, table, tbody, td, tfoot, th, thead, tr	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+td, th	{	
+	line-height:	1.33em;
+	}	
+		
+	/* end vertical */	
+
+
+
+
+	/* begin horizontal */	/* 1 - compact */
+		
+a, address, blockquote, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, b, big, center, dir, font, hr, i, menu, pre, s, strike, tt,		
+u, abbr, acronym, bdo, button, fieldset, ins, label	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	float:	none;
+	clear:	none;
+	list-style-position:	outside;
+	}	
+		
+address, blockquote, dl, fieldset, form, ol, 		
+p, ul,  dir, hr, menu, pre	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+div > p:first-child, body > p:first-child, td > p:first-child	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	text-indent:	0;
+	}	
+		
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, div + p, p.initial	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	text-indent:	0;
+	}	
+		
+h1	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h2	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h3	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h4	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h5	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h6	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+p	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-indent:	0;
+	}	
+		
+blockquote	{	
+	margin-left:	1.58em;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+address	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+pre	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+li	{	
+	margin-left:	3.16em;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+dt	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+dd	{	
+	margin-left:	1.58em;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+ul ul, ol ol, li address, li dl, li ol, li p, li ul, li dir, li hr, li menu, li pre, li h1, li h2, li h3, li h4, li h5, li h6, dd address, dd dl, dd ol, dd p, dd ul, dd dir, dd hr, dd menu, dd pre, dd h1, dd h2, dd h3, dd h4, dd h5, dd h6	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}
+			
+hr	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	width:	100%;
+	}	
+		
+center	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+col, colgroup, table, tbody, td, tfoot, th, thead, tr	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	float:	none;
+	clear:	none;
+	}	
+		
+table	{	
+	text-align:	left;
+	}	
+		
+td	{	
+	text-align:	left;
+	}	
+		
+th	{	
+	text-align:	left;
+	}	
+		
+caption	{	
+	text-align:	left;
+	}	
+		
+	/* end horizontal */	
+
+
+
+
+	/* begin body box */	/* 5 - 'ninths symmetric' */
+
+body	{
+	margin-top:	1.58em;
+	margin-left:	11%;
+	margin-right:	8%;
+	margin-bottom:	1.58em;
+	padding-top:	0;
+	padding-left:	0;
+	padding-right:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-left:	0;
+	border-bottom:	0;
+	border-right:	0;
+	width:	auto;
+	}
+	/* end body box */
+
+</style>
+
+  
+  
+  
+  <!--link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Oldstyle" type="text/css"-->
+  <style type="text/css" media="all">
+  
+  </style>
+ </head>
+
+ <body lang="en-us" style="text-align:justify">
+
+<h1 style="text-align: center">CSE 102 Homework 4</h1>
+
+
+<p><br><strong>NOTE:</strong>
+  Make sure you read the warnings about <a href="http://www.cs.sunysb.edu/~cse102/courseinfo.html">academic
+dishonesty</a>. <span style="color:black"><i>Remember, all work you submit for homework or exams MUST be your own work. Group efforts are not allowed for homework assignments.</i> </span>
+	
+
+</p><p>In this assignment you will duplicate the <a href="https://www3.cs.stonybrook.edu/~cse102/hw4/American%20Association%20of%20Community%20Colleges%20(AACC).htm">American Association of Community Colleges home page</a>,
+ but rather than using tables for layout, you must use CSS positioning. In addition, bonus points 
+will be available for including a form in the page that will use a CGI (or PHP) script to send a custom 
+email to your Sparky account. So, when you are done, you will have an .html file, a .css file, 
+and optionally, a .cgi (or .php) file.</p>
+ 
+<h3>Assignment Deadline and Submission</h3>
+
+<ul>
+  <li>The project deadline is Wednesday, April 17<sup>th</sup> before 5:00PM.</li>
+  <li>Make sure that your project is correctly posted on your <code>sparky</code> web account.</li>
+  <!--li>E-mail a link to your assignment to TA at <a href="mailto:sbucs102@gmail.com">sbucs102@gmail.com</a> <u>before</u>	 the deadline.<br /></li-->
+  <li><span style="color:black">Login to your <a href="http://facdev02.cs.stonybrook.edu:8080/grade.Login">grading account</a> <u>before</u>	 the deadline and submit all your homework files as ONE SINGLE ZIP FILE. This should include ALL your HTML, CSS and image files. 
+     <span style="color:red">Your submission should also include a text file that has the link to your homework assignment on sparky. </span></span></li>
+  <li>Also, post a link to the assignment on the CSE/ISE 102 Discussion Board <u>after</u> the submission deadline.<br>
+
+</li></ul>
+
+
+<p><strong>NOTE:</strong> this is not the type of assignment that should be done at the last minute. It cannot be done in half an hour. You should try to get started on it early so that you may ask questions of the instructor if you get stuck. You may start with the following skeleton structure for your page:</p>
+
+    <p><code>&nbsp;&lt;!DOCTYPE html&gt;<br>
+       &nbsp;&lt;html lang="en"&gt;<br>
+       &nbsp;&lt;head&gt;<br>
+       &nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+	   &nbsp;&nbsp;&lt;title&gt;Your Title&lt;/title&gt;<br>
+       &nbsp;&lt;/head&gt;<br>
+       &nbsp;&lt;body&gt;<br>
+       <br>
+       &nbsp;&lt;/body&gt;<br>
+       &lt;/html&gt;</code></p>
+
+<h3>Technical Requirements</h3>
+<p>Your Web pages &amp; style sheet must adhere to the following rules:</p>
+<ul>
+ <li>With the exception of the code already found on the <a href="https://www3.cs.stonybrook.edu/~cse102/hw4/American%20Association%20of%20Community%20Colleges%20(AACC).htm">American Association of Community Colleges  home page</a><strong>, you</strong> must write all of your own code by hand. Do not use a WYSIWYG tool for this assignment. Use Notepad or Pico or some other simple text-based tool.</li>
+ <li>You <strong>may not use tables</strong> in any way whatsoever in this HW. Tables should not be in your HTML document at all. Layout <em>must</em> be done with CSS positioning.</li>
+ <li>You must save all of the images you use locally in a directory named "images".</li>
+ <li>You must save all of your style sheets locally in a directory named "css".</li>
+ <li>Once you complete your work, post your files for your Web site to your <span style="color:red; font-weight:bold">Sparky</span> account and post the URL on the Blackboard message board. It will not be graded if it is on any other Web server.</li>
+ <li> Use the HTML 5.0 (or XHTML 1.0) standard. Once you post your Web site, you may <a href="http://validator.w3.org/">validate the pages</a> using the W3 service. The TA will use this same service when grading your HW, so try to eliminate all errors that pop up.</li>
+ <li>Your Web page <em>must</em> include an author name &amp; last modified date at the bottom. For the last modified date you may use the following script, just copy and paste it into your file:<br><br>
+
+<code>&lt;p style="text-align:center"&gt;<br>
+&lt;script type="text/javascript"&gt;<br>
+&lt;!--<br>
+&nbsp; &nbsp; &nbsp; document.write("Last Modified " + document.lastModified)<br>
+// --&gt;<br>
+&lt;/script&gt;
+&lt;/p&gt;</code></li>
+</ul>
+
+    <p>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="./CSE_ISE 102 - Homework 4_files/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88"></a>
+    </p>
+
+<p>To show your readers that you have taken the care to create an interoperable Web page, you may display this icon on any page that validates. Here is the HTML you should use to add this icon to your Web page:</p>
+
+    <p><code>&lt;p&gt;<br>
+      &lt;a href="http://validator.w3.org/check?uri=referer"&gt;&lt;img<br>
+      &nbsp; &nbsp; src="http://www.w3.org/Icons/valid-xhtml10"<br>
+      &nbsp; &nbsp; alt="Valid XHTML 1.0!" height="31" width="88" /&gt;&lt;/a&gt;<br>
+    &lt;/p&gt;</code></p>
+
+
+<h3>American Association of Community Colleges  Home Page Requirements (100 Points)</h3>
+<p>To start, look at the <a href="https://www3.cs.stonybrook.edu/~cse102/hw4/American%20Association%20of%20Community%20Colleges%20(AACC).htm">American Association of Community Colleges  home page</a>. Then, open up the source code and take a look at it. If you look carefully, you'll see that the layout of the page is done using tables. Different page components are placed into table cells, which dictate where on the screen they will appear. In <a href="http://blackboard.stonybrook.edu/">Chapter 6 and 7</a>, we discussed another mechanism for laying out pages using style sheets.</p>
+
+<p>Recreate the American Association of Community Colleges home page (1 page only) with all the same content and layout such that it adheres to the following requirements:</p>
+
+ <ul>
+  <li>It <em>must</em> use CSS positioning for all visible Web page components. That means you should break up the page into different entities, then each will be placed into their own &lt;div&gt; elements which can be positioned in the style sheet.</li>
+  <li>You may <em>not  use tables </em> for any purpose in this assignment. The first thing the TA will do is make sure you didn't violate this rule.</li>
+  <li>Try to recreate an identical page layout as best you can using this new CSS positioning technique. This means you will want similarly sized, similarly placed page components. <strong>Make sure all components are properly aligned.</strong> Ragged alignment in Web pages makes for very poor style. You may take as much code directly from the original site as you like.</li>
+  <li>Try to simulate all the same page style as in the original page. This would include:
+<ol>
+ <li>Formatted Hyperlinks, which should also all work</li>
+ <li>Colors</li>
+ <li>Fonts</li>
+ </ol></li></ul>
+<p><em><strong>NOTE</strong>:</em> Don't break your back trying to get an exact replica of the original site with all the same dimensions, colors, fonts, etc ..., but try to approximate the same look. Points will be deducted for sites with significant differences.</p>
+<p><em><strong>NOTE</strong>:</em> Your site should not include any JavaScript taken from the original American Association of Community Colleges home page, and so it will not have to generate anything dynamically. Just choose a moment in time from the home page and use those images, links, etc ...</p>
+
+<p><strong><em>NOTE</em>:</strong> it is important that you use your style sheet for all presentation specifications. I continue to stress this as this is the professional way of doing things.</p>
+
+<h3>Bonus Requirements (+10 Points)</h3>
+<p>If you look at the American Association of Community Colleges home page, you'll see there is a form at the bottom of the screen. It's there for searching the site. Instead of using that form, for bonus points, your Web page should allow a user to enter a message into a text field and an email address into another text field, and then send off the email by pressing a button. This would trigger a response page to the Web surfer. To do this, your page should do the following:</p>
+<ul>
+ <li><strong>Use 2 Text Field Controls</strong> - one should be titled "Message", and one titled "Email". You should make these the same size, and make sure they fit well with your layout. Remember, surfers like components to be nice and neat and aligned in a page, so you should make sure your page meets this criteria.</li>
+ <li><strong>Send Button</strong> - when someone enters a message and email address and presses this button, it should activate your script. This will be a different script than that used by the American Association of Community Colleges site's form, so make sure you specify the proper action for your form. This "Send" button will function as our submit button.</li>
+ <li><strong>The CGI Script</strong> - I have provided <a href="https://blackboard.stonybrook.edu/bbcswebdav/pid-4792530-dt-content-rid-34870326_1/courses/1194-CSE-102-SEC01-54102/email">email.cgi</a>, an initial version of a script you will have to modify to get the correct behavior. Make sure you don't forget the .cgi file extension when saving this file. It is essentially the join.cgi script from the textbook, which itself sends an email (we'll discuss how in class). Once you change the script, it should do the following:
+  <ol>
+   <li>Check to make sure a message and email address were entered. It doesn't have to check to make sure the email address is real, just make sure text was entered in the field. If either field is left blank, the script should return a Web page instructing the user to enter the required information.</li>
+   <li>When text is entered in both fields, the program should do 2 things:
+    <ol>
+     <li>It should send an email to the email address using the message provided by the user</li>
+     <li>It should return a Web page to the user simply informing him/her of the email, including who it was sent to and what the message said.</li>
+    </ol>
+  </li></ol></li>
+</ul>
+<p>In addition, as you have noticed, the American Association of Community Colleges home page has a slide show section at the top of the page. This is done by JavaScript inside the html code. Try to modify the JavaScript so that the page 
+displays a picture slide show with the pictures chosen by you.</p>
+
+<p><strong>NOTE:</strong> just so you know, not many changes need to be made to the CGI file, but they will require that you understand some of the basics of what the program is doing. Don't be afraid, it's not terribly complex. Examining the file you could probably figure out most of what it's doing.</p>
+
+<p><strong>NOTE:</strong> after placing the .cgi program in your Sparky account's cgi-bin directory, don't forget to set the file permissions to <strong>755</strong>.</p>
+
+<h3>Grading Key and Requirements</h3>
+<ul>
+<li>Code Written using a simple text editor (Yes or No)? If No, grade is zero. 
+</li><li>Web Page posted on Sparky (Yes or No) ? 	
+</li><li>Web Page uses tables, which are illegal (Yes or No) ? If Yes, grade is zero.
+</li><li>Web Page uses the CSS positioning for layout (Yes or No) ? If No, grade is zero.
+	
+	
+</li><li>Content Requirements using CSS positioning (Tables NOT accepted)<ul>	
+<li>All regions of the webpage present [10 points]
+</li><li>All parts similar in size [10 points]
+</li><li>All parts similar in location [10 points]
+</li><li>All parts aligned properly [10 points]
+</li><li>All parts properly spaced without overlapping [10 points]
+</li><li>All hyperlinks of similar format to the original [6 points]
+</li><li>All hyperlinks work correctly [8 points]
+</li><li>All colors appear to be similar [8 points]
+</li><li>All text sizes and fonts appear to be similar [8 points]
+</li><li>Author/Date of last revision [3 points]
+</li><li>Subtotal:	83</li></ul>
+</li><li>Submission Requirements
+<ul>
+<li>Email the correct link to TA before the deadline [6 points]
+</li><li>Posting the link on Blackboard discussion board after the HW deadline [4 points]
+</li><li>Subtotal: 10
+</li></ul></li>
+
+<li>Bonus Requirements<ul>
+<li>See above description	[10 points]
+</li><li>Subtotal:	10
+</li></ul>
+</li></ul>		
+<li>Overall Presentation (per TA judgment):	[7 points]
+	
+<p>Total:	100</p>
+
+
+
+
+
+</li></body></html>
