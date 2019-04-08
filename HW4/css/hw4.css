@@ -1,0 +1,73 @@
+body {
+    background-color: #CECFD6;
+    font: .75em/140% Verdana, Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #1d8ed0;
+}
+
+#center_content {
+    width: 986px;
+    margin: 0 auto;
+}
+
+/* TOP NAV LINK */
+#site_links {
+    text-align: right;
+}
+#site_links a:not(:last-child):after {
+    content: "\00a0|\00a0";
+    color: black;
+}
+#site_links a {
+    color: #626262;
+    text-decoration: none;
+}
+
+/* HEADER */
+#header {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#header_right {
+    vertical-align: bottom;
+}
+
+#search {
+    position: absolute;
+    bottom: 50%;
+    vertical-align: middle;
+}
+
+#search_input {
+    width:170px;
+}
+
+
+
+#navbar {
+    position: absolute;
+    bottom: 10px;
+    padding: 0px -5px 0px 0px;
+}
+
+#navbar a {
+    padding: 5px 10px;
+    margin-right: 1px;
+    background-color: #2C4A93;
+    font: bold 12px Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Validate and author required for hw */
+#center {
+    text-align:center;
+}
+#validate a img {
+    height:"31";
+    width:"88";
+}
