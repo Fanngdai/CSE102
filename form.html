@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <meta charset="UTF-8">
+    <style>
+        /* input, textarea {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <Form>
+        Name:  <input name="name" size="35" maxlength="50"/><br /><br />
+        Email: <input name="email" size="35" /><br /><br />
+        <input type="submit" value="Send" /><br /><br />
+        Please provide your feedback:<br />
+        <textarea name="feedback" cols="50" rows="5">I can be modified!</textarea><br /><br />
+        <textarea name="feedback" cols="50" rows="5" readonly="readonly">Some values in a textarea that can only be read.</textarea><br /><br />
+
+        Choose a color:<br />
+        <input type="radio" name="color" value="green" />Green<br />
+        <input type="radio" name="color" value="red" checked="checked"/>Red<br />
+        <input type="radio" name="color" value="blue" />Blue<br /><br />
+
+        Choose a sport:<br />
+        <input type="checkbox" name="sport" value="soccer" />Soccer<br />
+        <input type="checkbox" name="sport" value="ski" />Ski<br />
+        <input type="checkbox" name="sport" value="Tennis" />Tennis<br />
+        <input type="checkbox" name="sport" value="Baseball" />Baseball<br />
+    </Form>
+</body>
+</html>
