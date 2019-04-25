@@ -1,0 +1,988 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0131)https://blackboard.stonybrook.edu/bbcswebdav/pid-4813985-dt-content-rid-35280494_1/courses/1194-CSE-102-SEC01-54102/hw5%281%29.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CSE/ISE 102 - Homework 5 </title>
+
+  <meta name="title" content="CSE/ISE 102 - Homework 5 ">
+  <meta name="description" content="CSE/ISE 102 - Homework 5 ">
+  <meta content="text/css">
+  <!--link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Oldstyle" type="text/css"></link-->
+  
+ <style> 
+  
+ /* The W3C Core Styles Copyright (c) 1998 W3C (mit, inria, Keio), All Rights
+Reserved. W3C liability, trademark, document use and software licensing rules
+apply. See http://www.w3.org/Consortium/Legal/ipr-notice.html
+
+This stylesheet has been served in a form to avoid known bugs in your user
+agent's css implementation. Copying and serving this stylesheet to other
+agents may lead to unexpected results. Please refer to its address rather than
+copy it. */
+
+
+
+
+
+	/* begin body type */	/* 1 - humanist sans a */
+
+body	{	
+	font-size:	1em;
+	font-weight:	normal;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Verdana, Myriad Web, Syntax, sans-serif;
+	font-size-adjust:	.58;
+	}	
+
+p, blockquote, ul, ol, dl, dd, li, dir, menu	{	
+	/* inherit from body */	
+	}	
+
+small	{	
+	font-size:	.92em;
+	}	
+
+big	{	
+	font-size:	1.17em;
+	}	
+
+pre	{	
+	font-family:	'Monotype.com', Courier New, monospace;
+	}	
+
+ol li	{	
+	list-style-type:	decimal;
+	}	
+
+ol ol li	{	
+	list-style-type:	lower-alpha;
+	}	
+
+ol ol ol li	{	
+	list-style-type:	lower-roman;
+	}	
+
+table, tbody, tr, td	{	
+	font-size:	1em;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Verdana, Myriad Web, Syntax, sans-serif;
+	font-size-adjust:	.58;
+	}	
+
+	/* end body type */	
+
+
+
+
+	/* begin header type */	/* 2 - serif a */
+		
+h1	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	2.0em;
+	font-weight:	600;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h2	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.75em;
+	font-weight:	500;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h3	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.58em;
+	font-weight:	600;
+	font-style:	italic;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h4	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.33em;
+	font-weight:	600;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h5, dt	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1.17em;
+	font-weight:	600;
+	font-style:	italic;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	}	
+		
+h6	{	
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	font-size:	1em;
+	font-weight:	700;
+	font-style:	normal;
+	text-decoration:	none;
+	word-spacing:	normal;
+	letter-spacing:	.1em;
+	font-variant:	small-caps
+	}	
+		
+tfoot, thead	{	
+	font-size:	1em;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	}	
+		
+th	{	
+	vertical-align:	baseline;
+	font-size:	1em;
+	font-weight:	bold;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family:	Georgia, Minion Web, Palatino, Book Antiqua, Utopia, Times New Roman, serif;
+	font-size-adjust:	.4;
+	}	
+		
+hr	{	
+	visibility:	visible;
+	}	
+		
+	/* end header type */	
+
+
+
+
+	/* begin affordances */	/* 7 - rubric */
+		
+a, address, blockquote, body, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, big, center, dir, font, hr, menu, pre,		
+abbr, acronym, bdo, button, fieldset, ins, label	{	
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	text-decoration:	none;
+	border-color:	#999;
+	border-style:	none;
+	}	
+		
+body	{	
+	color:	black;
+	background:	#fffff5;
+	}	
+		
+em	{	
+	font-style:	normal;
+	font-weight:	bold;
+	color:	black;
+	background:	#fffff5;
+	}	
+		
+strong	{	
+	font-style:	italic;
+	background:	#fffff5;
+	font-weight:	bold;
+	color:	black;
+	}	
+		
+em strong, strong em	{	
+	text-transform:	uppercase;
+	font-style:	normal;
+	font-weight:	bolder;
+	background:	#fffff5;
+	color:	black;
+	}	
+		
+b	{
+	font-weight:	bold;
+	}
+	
+i	{
+	font-style:	italic;
+	}
+		
+.warning	{	
+	text-transform:	none;
+	font-style:	normal;
+	font-weight:	bolder;
+	background:	#FF0;
+	color:	red;
+	}	
+		
+del	{	
+	text-decoration:	line-through;
+	background:	#fc6;
+	}	
+		
+ins	{	
+	text-decoration:	none;
+	background:	#9F3;
+	}	
+		
+var, cite, dfn, .note	{	
+	font-style:	italic;
+	}	
+		
+address	{	
+	font-style:	normal;
+	letter-spacing:	.1em;
+	}	
+		
+acronym	{	
+	font-variant:	small-caps;
+	letter-spacing:	0.1em;
+	}	
+		
+h1, h2, h3, h4, h5, h6, dt, th, thead, tfoot	{	
+	color:	#C00;
+	background:	#fffff5;
+	}	
+		
+hr	{	
+	color:	black;
+	}	
+		
+#colophon	{	
+	display:	none;
+	}	
+		
+col, colgroup, table, tbody, td, tr	{	
+	color:	black;
+	text-decoration:	none;
+	border-color:	black;
+	border-style:	none;
+	background:	#fffff5;
+	}	
+		
+a:link	{	
+	text-decoration:	none;
+	font-weight:	bold; 
+	color:	#33F;
+	background:	#fffff5;
+	}	
+		
+a:visited	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	#93C;
+	background:	#fffff5;
+	}	
+		
+a:active	{	
+	text-decoration:	none;
+	font-weight:	bold;
+	color:	black;
+	background:	#ccf;
+	}	
+		
+a:hover	{	
+	text-decoration:	none;
+	color:	#fffff5;
+	background:	#33F;
+	}	
+		
+a.offsite	{	
+	text-decoration:	none;
+	font-weight:	normal;
+	color:	#33F;
+	background:	#fffff5;
+	}	
+		
+	/* end affordances */	
+
+
+
+
+	/* begin vertical */	/* 1 - pentatonic a */
+		
+a, address, blockquote, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, b, big, center, dir, font, hr, i, menu, pre, s, strike, tt,		
+u, abbr, acronym, bdo, button, fieldset, ins, label	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	vertical-align:	baseline;
+	}	
+		
+body	{	
+	line-height:	1.58em;
+	}	
+		
+div > p:first-child, body > p:first-child, td > p:first-child	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, div + p, p.initial	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h1, h2, h3, h4, h5, h6	{	
+	line-height:	1.33em;
+	}	
+		
+h1	{	
+	margin-top:	1.33em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h2	{	
+	margin-top:	1.75em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h3	{	
+	margin-top:	1.58em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h4	{	
+	margin-top:	1.33em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h5	{	
+	margin-top:	1.17em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+h6	{	
+	margin-top:	1em;
+	margin-bottom:	.33em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+p	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+blockquote, fieldset, form, ul, ol, dl, dir, menu	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+dt	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+dd	{	
+	margin-top:	0;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+ul ul, ol ol, li address, li dl, li ol, li p, li ul, li dir, li hr, li menu, li pre, li h1, li h2, li h3, li h4, li h5, li h6, dd address, dd dl, dd ol, dd p, dd ul, dd dir, dd hr, dd menu, dd pre, dd h1, dd h2, dd h3, dd h4, dd h5, dd h6	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+li	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+address	{	
+	margin-top:	1.58em;
+	margin-bottom:	1.58em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+pre	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	line-height:	1.25em;
+	}	
+		
+hr	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	height:	1px;
+	}	
+		
+div, center	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+.subhead	{	
+	margin-top:	.75em;
+	margin-bottom:	.75em;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+.stb	{	
+	margin-top:	2.17em;
+	margin-bottom:	.75em;
+	padding-top:	2.17em;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	border-style:	solid
+	}	
+		
+.mtb	{	
+	margin-top:	3.08em;
+	margin-bottom:	.75em;
+	padding-top:	3.08em;
+	padding-bottom:	0;
+	border-top:	.1em;
+	border-bottom:	0;
+	border-style:	solid
+	}	
+		
+.ltb	{	
+	margin-top:	4.34em;
+	margin-bottom:	.75em;
+	padding-top:	4.34em;
+	padding-bottom:	0;
+	border-top:	.25em;
+	border-bottom:	0;
+	border-style:	solid
+	}	
+		
+col, colgroup, table, tbody, td, tfoot, th, thead, tr	{	
+	margin-top:	0;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-bottom:	0;
+	}	
+		
+td, th	{	
+	line-height:	1.33em;
+	}	
+		
+	/* end vertical */	
+
+
+
+
+	/* begin horizontal */	/* 1 - compact */
+		
+a, address, blockquote, cite, code, dd, del, dfn,		
+div, dl, dt, em, form, h1, h2, h3, h4, h5, h6, iframe, img, kbd,		
+li, object, ol, p, q, samp, small, span, strong, sub, sup, ul, var, 		
+applet, b, big, center, dir, font, hr, i, menu, pre, s, strike, tt,		
+u, abbr, acronym, bdo, button, fieldset, ins, label	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	float:	none;
+	clear:	none;
+	list-style-position:	outside;
+	}	
+		
+address, blockquote, dl, fieldset, form, ol, 		
+p, ul,  dir, hr, menu, pre	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+div > p:first-child, body > p:first-child, td > p:first-child	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	text-indent:	0;
+	}	
+		
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, div + p, p.initial	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	text-indent:	0;
+	}	
+		
+h1	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h2	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h3	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h4	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h5	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+h6	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+p	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-indent:	0;
+	}	
+		
+blockquote	{	
+	margin-left:	1.58em;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+address	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+pre	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+li	{	
+	margin-left:	3.16em;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+dt	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+dd	{	
+	margin-left:	1.58em;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}	
+		
+ul ul, ol ol, li address, li dl, li ol, li p, li ul, li dir, li hr, li menu, li pre, li h1, li h2, li h3, li h4, li h5, li h6, dd address, dd dl, dd ol, dd p, dd ul, dd dir, dd hr, dd menu, dd pre, dd h1, dd h2, dd h3, dd h4, dd h5, dd h6	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	}
+			
+hr	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	width:	100%;
+	}	
+		
+center	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	text-align:	left;
+	}	
+		
+col, colgroup, table, tbody, td, tfoot, th, thead, tr	{	
+	margin-left:	0;
+	margin-right:	0;
+	padding-left:	0;
+	padding-right:	0;
+	border-left:	0;
+	border-right:	0;
+	float:	none;
+	clear:	none;
+	}	
+		
+table	{	
+	text-align:	left;
+	}	
+		
+td	{	
+	text-align:	left;
+	}	
+		
+th	{	
+	text-align:	left;
+	}	
+		
+caption	{	
+	text-align:	left;
+	}	
+		
+	/* end horizontal */	
+
+
+
+
+	/* begin body box */	/* 5 - 'ninths symmetric' */
+
+body	{
+	margin-top:	1.58em;
+	margin-left:	11%;
+	margin-right:	8%;
+	margin-bottom:	1.58em;
+	padding-top:	0;
+	padding-left:	0;
+	padding-right:	0;
+	padding-bottom:	0;
+	border-top:	0;
+	border-left:	0;
+	border-bottom:	0;
+	border-right:	0;
+	width:	auto;
+	}
+	/* end body box */
+
+</style>
+
+  <style type="text/css" media="all">
+  <!-- table
+       { margin-left: 10;
+	 margin-top:5	  }
+       td
+       { padding-left: 20 }
+       ol
+       { list-style-type: "upper-roman" } .style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+  </style>
+ </head>
+
+ <body lang="en-us" style="text-align:justify">
+
+<h1 style="text-align: center">CSE/ISE 102 Homework 5</h1>
+
+<p><span style="color:#CC0000; font-weight:bold">Note:</span> Make sure you read the warnings about <a href="http://www.cs.sunysb.edu/~cse102/courseinfo.html">academic
+dishonesty</a>. <i>Remember, all work you submit for homework  assignments MUST be your own work.
+Also, group efforts are not allowed for homework assignments.
+</i>
+</p>
+
+<p>Select <u>one</u> of the following categories and create a complete website <!--of your choice-->   (ONLY from the following list - other websites will not be accepted) : 
+</p><ul>  
+	<li>Real Estate</li>
+	<li>Travel Agency</li>
+	<li>Fashion Store</li>
+	<li>Grocery Store</li>
+	<li>Car Dealership</li>
+</ul>
+
+<p><strong><i>NOTE</i>:</strong> <span style="color:red">Do NOT replicate a website.</span> It is NOT acceptable if you copy the layout and its content from another website. It must be your own design and work. </p>
+
+The website must contain at least four related web pages with uniform layout and navigation bar. 
+<!--You must use a three (or more) column layout grid with at least three rows in each column.--> For more information, refer to Chapters 6 and 7 of your textbook.
+You may not use any web pages from previous work including HW1-HW4. <p></p>
+<p>In this assignment, you will use Adobe Dreamweaver, a WYSIWYG, which will generate XHTML code for you rather than you having to type it yourself<!--, and tables for the page's layout instead of CSS positioning-->. </p>
+<p>In addition, bonus points 
+will be available to display a different image each time your home page is loaded. </p>
+
+<p><strong>NOTE:</strong> this is not the type of assignment that should be done at the last minute. It cannot be done in half an hour. You should try to get started on it early so that you may ask questions of the instructor if you get stuck. You may start with the following skeleton structure for your page:</p>
+
+    <p><code>&nbsp;&lt;!DOCTYPE html&gt;<br>
+       &nbsp;&lt;html lang="en"&gt;<br>
+       &nbsp;&lt;head&gt;<br>
+       &nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+	   &nbsp;&nbsp;&lt;title&gt;Your Title&lt;/title&gt;<br>
+       &nbsp;&lt;/head&gt;<br>
+       &nbsp;&lt;body&gt;<br>
+       <br>
+       &nbsp;&lt;/body&gt;<br>
+       &lt;/html&gt;</code></p>
+
+<h3>Assignment Deadline and Submission</h3>
+<ul>
+  <li>The project deadline is Wednesday, May 8<sup>th</sup> before 5:00PM.</li>
+  <li>Make sure that your project is correctly posted on your <code>sparky</code> web account.</li>
+  <!--li>E-mail a link to your assignment to TA at <a href="mailto:sbucs102@gmail.com">sbucs102@gmail.com</a> <u>before</u>	 the deadline.<br /></li-->
+  <li><span style="color:black">Login to your <a href="http://facdev02.cs.stonybrook.edu:8080/grade.Login">grading account</a> <u>before</u>	 the deadline and submit all your homework files as ONE SINGLE ZIP FILE. This should include ALL your HTML, CSS and image files. 
+     <span style="color:red">Your submission should also include a text file that has the link to your homework assignment on sparky. </span></span></li>
+  <li>Also, post a link to the assignment on the CSE/ISE 102 Discussion Board <u>after</u> the submission deadline.<br>
+</li></ul>
+
+	   
+<h3>Technical Requirements</h3>
+<p>Your Web pages &amp; style sheet must adhere to the following rules:</p>
+<ul>
+ <!--li>For this assignment, you <em>must</em> use tables and a WYSIWYG tool. You may use <a href="http://www.adobe.com/products/dreamweaver/">Adobe (Macromedia) Dreamweaver</a>, for which you may download a free trial version for 30 days. Otherwise, you may work in any <a href="http://www.ic.sunysb.edu/Sinc/">SINC site</a> or <a href="http://www.cs.sunysb.edu/~translab">Translab</a>, which has Dreamweaver installed on all PCs.</li-->
+ <!--li>You may not use CSS positioning in any way whatsoever in this HW. Layout <em>must</em> be done with tables. </li-->
+ <li>You must save all of the images you use locally in a directory named "images".</li>
+ <li>You must save all of your style sheets locally in a directory named "css".</li>
+ <li>Once you complete your work, post your files for your Web site to your <span style="color:red; font-weight:bold">Sparky</span> account and post the URL on the Blackboard message board. It will not be graded if it is on any other Web server.</li>
+ <li>Your Web page <em>must</em> include an author name &amp; last modified date at the bottom. For the last modified date you may use the following script, just copy and paste it into your file:<br>
+   <br>
+
+   <code>&lt;p style="text-align:center"&gt;<br>
+&lt;script type="text/javascript"&gt;<br>
+&lt;!--<br>
+&nbsp; &nbsp; &nbsp; document.write("Last Modified " + document.lastModified)<br>
+// --&gt;<br>
+&lt;/script&gt;
+&lt;/p&gt;</code></li>
+ </ul>
+
+<p>
+      <a href="http://validator.w3.org/check?uri=referer"><img src="./Homework 5_files/valid-xhtml10" alt="Valid XHTML 1.0!" height="31" width="88"></a>
+    </p>
+
+<p>To show your readers that you have taken the care to create an interoperable Web page, you may display this icon on any page that validates. Here is the HTML you should use to add this icon to your Web page:</p>
+
+    <p><code>&lt;p&gt;<br>
+      &lt;a href="http://validator.w3.org/check?uri=referer"&gt;&lt;img<br>
+      &nbsp; &nbsp; src="http://www.w3.org/Icons/valid-xhtml10"<br>
+      &nbsp; &nbsp; alt="Valid XHTML 1.0!" height="31" width="88" /&gt;&lt;/a&gt;<br>
+    &lt;/p&gt;</code></p>
+
+
+<h3>Other Requirements (100 Points)</h3>
+<p>Create your website with the content and layout such that it adheres to the following requirements:</p>
+
+<ul>
+  <!--li>You may <em>not</em> use CSS positioning for any purpose in this assignment. The first thing the TA will do is make sure you didn't violate this rule.</li-->
+  <li>Create page layout <!--using tables.--> and <strong>Make sure all components are properly aligned.</strong> Ragged alignment in Web pages makes for very poor style. </li>
+ </ul>
+ 
+<p><strong><em>NOTE</em>:</strong> it is important that you use your style sheet for all presentation specifications. I continue to stress this as this is the professional way of doing things.</p>
+
+<h3>Bonus Requirements (+10 Points)</h3>
+<p>Some websites including <!--a href="http://www.sunysb.edu/">Stony Brook University</a> or--> <a href="http://giving.buffalo.edu/">University at Buffalo</a> display a different image each time the  home page is loaded or refreshed. Use the same idea with Javascript and randomly select an image from a set of at least 16 images when your home page is displayed. </p>
+<p><strong>NOTE:</strong> the JavaScript code to do this is already on these websites, so just make necessary changes to the JavaScript.</p>
+<h3>Grading Key and Requirements</h3>
+<ul>
+  <li>Code Written by Hand (Yes or No) ? </li>
+  <li>Web Page posted on Sparky (Yes or No) ? </li>
+  <!--li>Web Page uses tables (Yes or No) ? </li-->
+  <!--li>Web Page uses the <strong>CSS positioning</strong> for layout, which is <strong>not accepted</strong> (Yes or No) ? <span style="color:#C00"> Your grade will be ZERO if CSS positioning is used. </span></li-->
+  <li>Content Requirements
+    <ul>
+      <li>Each page describes different contents [7 points]</li>
+     <!--
+	  <li>Layout .... (details will be provided later) [30 points]</li>
+	 
+      <li>Layout has three or more columns [6 points]</li>
+      <li>Layout has three or more rows [6 points]</li>
+     -->     
+	  <li>Layout is uniform across all web pages [10 points]</li>
+      <li>Layout doesn't break when window size changes [7 points]</li>
+      <li>Layout elements have distinctive purpose (e.g. header, navigation) [8 points]</li>
+      <li>Layout elements are neatly aligned [9 points]</li>
+	 
+      <li>Uniform navigation bar used in all pages (use  buttons) [7 points]</li>
+      <li>Same CSS file for all web pages stored in "css" folder[5 points]</li>
+	  <li>All images stored in "images" folder [3 points] </li>
+      <li>Author name and date [3 points]</li>
+      <li>Subtotal:	59 
+    </li></ul>
+  </li>
+  <li>Submission Requirements
+<ul>
+<li>Include the link to the assignment in the submission folder [2 points]
+</li><li>Posting the link on Blackboard discussion board after the HW deadline [2 points]
+</li><li>Subtotal: 4
+</li></ul></li>
+
+<li>Bonus Requirements<ul>
+<li>See above description	[10 points]
+</li><li>Subtotal:	10
+</li></ul>
+</li></ul>		
+<li>Overall Presentation (per TA judgment):	[37 points]
+	
+<p>Total:	100</p>
+
+
+
+
+
+</li></body></html>

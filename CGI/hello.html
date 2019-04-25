@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Web Page with Forms</title>
+    <link rel="stylesheet" type="text/css" href="./css/form.css" />
+</head>
+
+<body>
+    <p style="font-weight: bold; font-size: larger"> Complete this form:</p>
+    <form method="post" action="http://www.sinc.sunysb.edu/cgi-bin/cgiwrap/fdai/hello.cgi">
+        <table width="400">
+            <tr> <td class="fla"><label for="name">Full Name:</label></td>
+                <td><input id="name" name="name" size="35" /></td>
+            </tr>
+            <tr> <td class="fla"><label for="email">Email:</label></td>
+                <td><input id="email" name="email" size="35" /></td>
+            </tr>
+            <tr> 
+                <td></td>
+                <td><input type="submit" value="Send" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
