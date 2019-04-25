@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Practice Page</title>
+    <link rel="stylesheet" type="text/css" href="./css/javaScript.css" />
+</head>
+
+<body>
+    <div id="date">
+        <p>Some Client Details:
+        <br />
+        <script type="text/javascript">
+            var d = new Date();
+            var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            var agent = navigator.userAgent;
+            document.write("&nbsp;&nbsp;Date: " + d + "<br />");
+            document.write("<span id='time'>&nbsp;&nbsp;Time: " + time + "</span><br />");
+            document.write("&nbsp;&nbsp;Agent: " + agent + "</p>");
+        </script>  
+    </div>
+
+    <div id="image_rollover">
+        <h2>Image Rollover</h2>
+        <p>
+            <img 
+            onmouseover="this.src='http://www.cs.stonybrook.edu/~cse102/images/homertaunt.gif'; this.width='300'; this.height='300';"
+            onmouseout="this.src='http://www.cs.stonybrook.edu/~cse102/images/homer.jpg'; this.width='150'; this.height='150';"
+            src="http://www.cs.stonybrook.edu/~cse102/images/homer.jpg"
+            style="border:none; float:left; margin-right:10px"  width="150" height="150">
+            Rollover Homer to get him to taunt you.
+        </p> 
+    </div>
+
+    <div id="history">
+        <p>
+            <a href="javascript:history.back()">Back</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:history.forward()">Forward</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:history.go(-2)">Back 2 Pages</a>
+        </p>
+    </div>
+    
+    <div id="dialogs">
+        <p>
+            <a href="javascript:alert('This script is for giving alerts, like when your credit card number is invalid.');">Alert</a><br />
+            <a href="javascript:var email = prompt('This script will ask for input. Please enter you email address:'); confirm('Email is: ' + email); history.refresh()">Prompt</a><br />
+            <a href="javascript:window.open( 'http://www.cs.stonybrook.edu/~cse102/images/homer.jpg', 'Homer', 'scrollbars=no, toolbar=no, height=200, width=200, screenX=300, screenY=300'); history.refresh()">
+            Popup Homer</a>
+        </p>
+    </div>
+           
+           
+</body>
+</html>

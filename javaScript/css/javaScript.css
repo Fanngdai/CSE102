@@ -1,0 +1,19 @@
+#date {	
+    position : absolute;
+    left : 300px;
+    top : 300px;
+    width : 500px;
+    color:#0000cc;
+    background-color:#dddd00;
+    padding : 10px;
+}
+
+#time {
+    color : red;
+}
+
+/* #image {
+    border: none;
+    float: left; 
+    margin-right: 10px;
+} */
