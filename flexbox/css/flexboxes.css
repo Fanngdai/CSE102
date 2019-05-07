@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+}
+
+#hero-image {
+    height: calc(100vh - 50px);
+    background-image: url("../images/hero-dog.jpg");
+    background-size: cover;
+    margin-top: 50px;
+}
+
+/* NAVIGATION BAR */
+
+#navbar {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar {
+    height: 50px;
+    background-color: lightskyblue;
+}
+
+a:link,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#navigation-links {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+#navigation-links > li {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: wait;
+}
+
+/* Cards */
+
+#item {
+	border-radius: 50%;
+    box-shadow: 2px 2px 2px grey;
+}
+
+#dog-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.card {
+    border: 1px solid lightgray;
+    border-radius: 10%;
+    padding: 10px;
+    width: 300px;
+    min-width: 150px;
+    text-align: center;
+    box-shadow: 5px 5px grey;
+}
+
+.img-100 {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.divider {
+    width: 75%;
+    border: 2px solid deepskyblue;
+}
+
+.quote {
+    color: navy;
+    font-size: 20px;
+}

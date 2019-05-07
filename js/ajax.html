@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function showHint(str) {
+                var xmlhttp;
+                if (str.length==0)
+                {
+                    document.getElementById("txtHint").innerHTML="";
+                    return;
+                }
+                if (window.XMLHttpRequest)
+                {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","gethint.php?q="+str,true);
+                xmlhttp.send();
+            }
+	
+			function substr(str, p)
+            {
+                var xmlhttp;
+                if (str.length==0)
+                {
+                    document.getElementById("para").innerHTML=xmlhttp.responseText;
+                }
+                if (window.XMLHttpRequest)
+                {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("para").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","substring.php?q="+str+"&p="+p,true);
+                xmlhttp.send();
+            }
+		
+        </script>
+		 <style type="text/css">
+			a:link 		{color:#ddd;}
+			a:visited 	{color:#999;}
+			a:hover		{color:#fff;}
+			a:active	{color:#ccc;}
+		</style>
+</head>
+<body style = "background-color:#222; margin-left:3em; font-family:calibri; color:#fff">
+    <h1 style = "font-size:40pt; margin-top:10px">AJAX!</h1>
+        
+        <p><form action="" > 
+            Search for a CSE or ISE course: <input type="text" id="txt1" onkeyup="showHint(this.value)" value="ex: CSE 102" onclick="this.value=''" style="font-family:calibri" />
+        </form><br />
+        </p>
+        
+        <p style="font-size:17px; font-family:calibri"><strong>Results:</strong></p>
+        <div style="width: 500px; height: 200px; overflow: scroll; overflow-x: hidden; border:7px solid; border-color:#111; background-color: #111;">
+        <span style="font-size:14px" id="txtHint"></span></div>
+
+        <p><br />
+            <form action=""> 
+                Search for text in the paragraph: <input type="text" id="txt2" onkeyup="substr(this.value, para.innerHTML)" style="font-family:calibri" />
+            </form>
+		</p>
+		
+		<div id = "para" style="width: 500px; border:7px solid; border-color:#111; background-color: #111; text-align:justify; font-size:14px">
+			Ajax (Asynchronous JavaScript and XML) is a group of interrelated web development techniques used on the client-side to create asynchronous web applications. 
+			With Ajax, web applications can send data to, and retrieve data from, a server asynchronously (in the background) without interfering with the display and behavior of the existing page. 
+			Data can be retrieved using the XMLHttpRequest object. Despite the name, the use of XML is not required (JSON is often used instead), and the requests do not need to be asynchronous.
+			Ajax is not a single technology, but a group of technologies. HTML and CSS can be used in combination to mark up and style information. 
+			The DOM is accessed with JavaScript to dynamically display, and to allow the user to interact with the information presented. 
+			JavaScript and the XMLHttpRequest object provide a method for exchanging data asynchronously between browser and server to avoid full page reloads.
+		</div>
+
+</body>
+</html>
