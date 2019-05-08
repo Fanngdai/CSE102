@@ -4,10 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Travel</title>
+	<title>Flight</title>
 	<link rel="icon" href="images/favicon.png"/>
 	
-	<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link href="css/travel.css" rel="stylesheet" type="text/css">
 	
@@ -23,37 +22,48 @@
 		<a href="./car.html"><i class="fas fa-car"></i>&nbsp;Car</a>
 		<a href="./contact_us.html"><i class="fas fa-phone"></i>&nbsp;Contact Us</a>
 	</nav>
-	<div>
-		<script>getRandomImage(random_images_array, 'images/')</script>
-	</div>
+	<div class="center">
+		<form>
+			<span>
+				<input type="radio" name="type" value="round">Round Trip
+				<input type="radio" name="type" value="one">One Way
+				<input type="radio" name="type" value="multi">Multi City
+			</span>
 
-	<h1>Travel with us!</h1>
-	<div class="slider">
-		<img class="slide" src="images/travel1.jpg" alt="image">
-		<img class="slide" src="images/travel2.jpg" alt="image">
-		<img class="slide" src="images/travel3.jpg" alt="image">
-		<img class="slide" src="images/travel4.jpg" alt="image">
-		<img class="slide" src="images/travel5.jpg" alt="image">
-		<img class="slide" src="images/travel6.jpg" alt="image">
-		<img class="slide" src="images/travel7.jpg" alt="image">
-		<img class="slide" src="images/travel8.jpg" alt="image">
-		<img class="slide" src="images/travel9.jpg" alt="image">
-		<img class="slide" src="images/travel10.jpg" alt="image">
-		<img class="slide" src="images/travel11.jpg" alt="image">
-		<img class="slide" src="images/travel12.jpg" alt="image">
-		<img class="slide" src="images/travel13.jpg" alt="image">
-		<img class="slide" src="images/travel14.jpg" alt="image">
-		<img class="slide" src="images/travel15.jpg" alt="image">
-		<img class="slide" src="images/travel16.jpg" alt="image">
-		<img class="slide" src="images/travel17.jpg" alt="image">
-		<img class="slide" src="images/travel18.jpg" alt="image">
-		<img class="slide" src="images/travel19.jpg" alt="image">
-		<img class="slide" src="images/travel20.jpg" alt="image">
+			<input id="destination" name="destination" size="35" placeholder="Destination"/> 
+			<input id="source" name="source" size="35" placeholder="Source"/> 
+
+			<span>Depart&nbsp;<input type="date" name="depart"></span>
+			<span>Return&nbsp;<input type="date" name="return"></span>
+
+			<span><input type="number" name="adult" min="0" max="20" value="1">&nbsp;Adult</span>
+			<span><input type="number" name="adult" min="0" max="20" value="0">&nbsp;Seniors</span>
+			<span><input type="number" name="adult" min="0" max="20" value="0">&nbsp;Youth</span>
+			<span><input type="number" name="adult" min="0" max="20" value="0">&nbsp;Child</span>
+			<span><input type="number" name="adult" min="0" max="20" value="0">&nbsp;Seat Infant</span>
+			<span><input type="number" name="adult" min="0" max="20" value="0">&nbsp;Lap Infant</span>
+
+			<select>
+				<option value="econ">Economy</option>
+				<option value="prem">Premium economy</option>
+				<option value="busi">Business class</option>
+				<option value="first">First-class</option>
+			</select>
+
+			<input type="submit" value="Search">
+		</form>
 	</div>
-	
+	<div class="slider">
+			<img class="slide" src="images/flight1.jpeg" alt="flight">
+			<img class="slide" src="images/flight2.jpeg" alt="flight">
+			<img class="slide" src="images/flight3.jpeg" alt="flight">
+			<img class="slide" src="images/flight4.jpeg" alt="flight">
+			<img class="slide" src="images/flight5.jpeg" alt="flight">
+			<img class="slide" src="images/flight6.jpeg" alt="flight">
+		</div>
 	<footer>
-	<div class="footer_vertical">
-	  		<select>
+		<div class="footer_vertical">
+			<select>
 				<option value="EN">English</option>
 				<option value="AF">Afrikanns</option>
 				<option value="SQ">Albanian</option>
@@ -210,20 +220,20 @@
 			</select>
 		</div>
 		<div class="footer_vertical">
-            <a href="#">About</a>
+			<a href="#">About</a>
 			<a href="#">Careers</a>
 			<a href="#">Help</a>
 			<a href="#">Terms of Services</a>
 		</div>
 		<div>
-            &copy; 
-            <a href="http://www.fannydai.me" target="_blank">Fanng Dai</a>
-            <br />
-            <script>
-                document.write("Last Modified " + document.lastModified)
-            </script>
-            <p>
-                <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+			&copy; 
+			<a href="http://www.fannydai.me" target="_blank">Fanng Dai</a>
+			<br />
+			<script>
+				document.write("Last Modified " + document.lastModified)
+			</script>
+			<p>
+				<a href="http://validator.w3.org/check?uri=referer" target="_blank">
 				<img
 					src="http://www.w3.org/Icons/valid-xhtml10"
 					alt="Valid XHTML 1.0!" height="31" width="88" />
@@ -232,4 +242,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>

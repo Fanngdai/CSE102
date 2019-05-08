@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+footer select {
+	margin-bottom: 10px;
+	width: 250px;
+}
+
+.footer_vertical {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	footer select {
+		display: block;
+		margin: 10px auto;
+	}
+	footer {
+		padding: 10px;
+		margin-top: 20px;
+		background-color: rgba(0,134,255, 0.5);
+	 	background-size: cover;
+		margin: auto;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer_vertical {
+		padding-bottom: 10px;
+	}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	footer select {
+		display: block;
+		margin: 10px auto;
+	}
+	footer {
+		padding: 10px;
+		margin-top: 20px;
+		background-color: rgba(0,134,255, 0.5);
+	 	background-size: cover;
+		margin: auto;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer_vertical {
+		padding-bottom: 10px;
+	}
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	footer {
+		padding: 2%;
+		margin-top: 20px;
+		background-color: rgba(0,134,255, 0.5);
+	 	background-size: cover;
+		width: 96%;
+		/* padding-bottom: 20px; */
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+} 

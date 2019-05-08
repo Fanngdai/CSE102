@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "navbar.css"; 
+@import "footer.css"; 
+
+body {
+	margin: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 100vh;
+	min-width: 520px;
+	background-color: #F2F3F2;
+	font-family: "Lucida Console", Monaco, monospace;
+
+	color: #F2F3F2;
+}
+
+form {
+	background-color: white;
+	  
+	padding: 30px;
+	color: rgba(86, 113, 137, 0.6);
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+textarea,
+span {
+	margin-bottom: 10px;
+}
+
+.center {
+	display:flex;
+	justify-content: center;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+
+h1 {
+	color: #0086FF;
+}
+
+a {
+	color: #F2F3F2;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+select {
+	margin-bottom: 10px;
+	width: 300px;
+}
+
+input {
+	max-width: 300px;
+	margin-bottom: 10px;
+}
+
+
+#logo {
+	width: 100%;
+}
+
+#headerImg {
+	width: 100%;
+}
+
+.slider {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	overflow-x: auto;
+}
+.slide {
+	width: 300px;
+	flex-shrink: 0;
+	height: 100%;
+	padding-left:2px;
+	padding-right: 2px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	body {
+		margin: auto;
+		height: 100vh;
+		min-width: 500px;
+	}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

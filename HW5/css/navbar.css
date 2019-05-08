@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav {
+	white-space: nowrap;
+	display: flex;
+	justify-content: flex-end;
+	text-transform: uppercase;
+}
+
+nav 	a:visited,
+nav  	a:active,
+nav  	a:link {	
+	font-weight: bold;
+	text-decoration: none;
+	color: #F2F3F2;
+	padding: 10px;
+	border-width: 3px;
+	margin-left: 2px;
+	border-top-left-radius: 20%;
+	border-top-right-radius: 20%;
+	
+	background-color: #0086FF;
+	border-color: #0086FF;
+}
+
+nav   	a:hover {
+	background-color: #006BCC;
+	border-color: #006BCC;
+}
