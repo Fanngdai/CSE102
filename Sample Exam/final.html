@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>title</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <meta charset="UTF-8">
+    <style>
+        p {font-family: Arial, Verdana, sans-serif;}
+        pre { border: 5px solid #ff0000; }
+
+        .navbar a:link{
+            text-decoration: none;  /* No underline for navbar */
+            display: block; /* makes it go vertical rather than horizontal */
+        }
+        #navbar2 ul { list-style-type: none; }
+        #navbar2  a { text-decoration: none; padding-right: 10px; }
+        #navbar2 li {  display: inline; } /* in one line */
+
+
+        table {
+            text-align: center;
+            border: 4px solid black;
+            border-spacing: 5px;
+        }
+        td { border: 1px solid black;}
+    </style>
+    <!-- <link rel="stylesheet" href="wildflower.css" type="text/css" media="screen"> -->
+    <!-- <script type="text/javascript">
+        alert("Welcome to Our Site");
+    </script> -->
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="courseinfo.html">Home</a>
+        <a href="schedule.html">about</a>
+        <a href="hw/index.html">contact</a>
+        <!-- border-style: outset;   border-style: inset; -->
+    </div>
+
+    <div id="navbar2">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="directions.html">Directions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <p title="title attribute is a tooltip">
+        <b>bold</b>
+        <strong>bold</strong>
+        <em>emphasized</em>
+        <i>italicized</i>
+        <mark>highlight</mark>
+        <small>small text</small>
+    </p>
+    <p>x<sub>t</sub> = x<sub>0</sub> + v * t</p>
+    <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+    <blockquote>"AHHHHHHHHH" - unknown</blockquote>
+
+    <pre>
+        north
+    west    east    
+        south
+    </pre>
+
+    <dl>
+        <dt style="border-bottom: 2px dashed #000">IP</dt>
+            <dd>Internet Protocol</dd>
+        <dt>TCP</dt>
+            <dd>Transmission <span style="font-weight:bold">Control</span> Protocol</dd>
+    </dl>
+
+    <ul>
+        <li><a href="" target="blank">Site</a></p>
+            <ol>
+                <li><a href="mailto:fannydai@gmail.com">Yellow</a></li>
+                <li>Pink</li>
+                <li>Blue</li>
+            </ol>
+        </li>
+        <li>
+            HI
+        </li>
+    </ul>
+
+    <table cellpadding="40" align="left"><caption>Menu</caption>
+        <tr>
+            <td>Chicken</td>
+            <td colspan="2">Sheep</td>
+        </tr>
+        <tr>
+            <td rowspan="2">BOOOOOOOK</td>
+            <td>mac</td>
+            <td>$1,000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>window</td>
+        </tr>
+    </table>
+
+</body>
+</html>
