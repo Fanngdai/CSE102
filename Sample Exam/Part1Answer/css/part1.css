@@ -1,0 +1,56 @@
+body {
+    margin: 5px;
+}
+
+h1, h4 {
+    color: #0000cc;
+    margin:0;
+}
+
+a {
+    color: #2145EE;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #562A8B;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #D0D0D0;
+}
+
+tr:nth-child(odd) {
+    background-color: #C0C0C0;
+}
+
+.header {
+    text-align: center;
+}
+
+.side_bar {
+    position: absolute;
+    width: 210px;
+}
+
+.main_content {
+    margin : 0px 0px 0px 210px;
+}
+
+#footer {
+    text-align: center;
+}
+
+#footer p {
+    margin: 0px;
+    font-weight: bold;
+}

@@ -9,14 +9,38 @@
         p {font-family: Arial, Verdana, sans-serif;}
         pre { border: 5px solid #ff0000; }
 
-        .navbar a:link{
-            text-decoration: none;  /* No underline for navbar */
-            display: block; /* makes it go vertical rather than horizontal */
+        .navbar{
+            font-family: Arial, Helvetica, sans-serif;
+            white-space: nowrap;
         }
+        .navbar    a:visited,
+        .navbar    a:active,
+        .navbar    a:link{	
+            font-weight: bold;
+            text-decoration: none;          /* No underline for navbar */
+            background-color: #eb0;
+            color: #200;
+            padding: 2px;
+            border-width: 3px;              /* border : 3px  outset  #eb0 */
+            border-style: outset;
+            border-color: #eb0;
+            display: block;                 /* makes it go vertical rather than horizontal; inline for horizontal */
+            width: 200px;
+        }
+        .navbar    a:hover{	
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #eb0;
+            color: #200;
+            padding: 2px;
+            border-width: 3px;             /* border : 3px  outset  #eb0 */
+            border-style: inset;
+            border-color: #eb0;
+        }
+        
         #navbar2 ul { list-style-type: none; }
         #navbar2  a { text-decoration: none; padding-right: 10px; }
         #navbar2 li {  display: inline; } /* in one line */
-
 
         table {
             text-align: center;
@@ -24,6 +48,28 @@
             border-spacing: 5px;
         }
         td { border: 1px solid black;}
+
+        #middle-block, #bottom-left, #bottom-right {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: -1;
+        }
+        #middle-block {
+            background-color: lightgreen;
+            left: 50%;
+            top: 30%;
+        }
+        #bottom-left {
+            background-color: lightblue;
+            left: 0;
+            bottom: 0;
+        }
+        #bottom-right {
+            background-color: lightcoral;
+            right: 0;
+            bottom: 0;
+        }
     </style>
     <!-- <link rel="stylesheet" href="wildflower.css" type="text/css" media="screen"> -->
     <!-- <script type="text/javascript">
@@ -49,32 +95,27 @@
         </ul>
     </div>
 
-    <p title="title attribute is a tooltip">
-        <b>bold</b>
-        <strong>bold</strong>
-        <em>emphasized</em>
-        <i>italicized</i>
-        <mark>highlight</mark>
-        <small>small text</small>
-    </p>
-    <p>x<sub>t</sub> = x<sub>0</sub> + v * t</p>
-    <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
-    <blockquote>"AHHHHHHHHH" - unknown</blockquote>
+    <Form>
+        Name:  <input name="name" size="35" maxlength="50"/><br /><br />
+        Email: <input name="email" size="35" /><br /><br />
+        <input type="submit" value="Send" /><br /><br />
+        Please provide your feedback:<br />
+        <textarea name="feedback" cols="50" rows="5">I can be modified!</textarea><br /><br />
+        <textarea name="feedback" cols="50" rows="5" readonly="readonly">Some values in a textarea that can only be read.</textarea><br /><br />
 
-    <pre>
-        north
-    west    east    
-        south
-    </pre>
+        Choose a color:<br />
+        <input type="radio" name="color" value="green" />Green<br />
+        <input type="radio" name="color" value="red" checked="checked"/>Red<br />
+        <input type="radio" name="color" value="blue" />Blue<br /><br />
 
-    <dl>
-        <dt style="border-bottom: 2px dashed #000">IP</dt>
-            <dd>Internet Protocol</dd>
-        <dt>TCP</dt>
-            <dd>Transmission <span style="font-weight:bold">Control</span> Protocol</dd>
-    </dl>
+        Choose a sport:<br />
+        <input type="checkbox" name="sport" value="soccer" />Soccer<br />
+        <input type="checkbox" name="sport" value="ski" />Ski<br />
+        <input type="checkbox" name="sport" value="Tennis" />Tennis<br />
+        <input type="checkbox" name="sport" value="Baseball" />Baseball<br />
+    </Form>
 
-    <ul>
+    <ul title="title attribute is a tooltip">
         <li><a href="" target="blank">Site</a></p>
             <ol>
                 <li><a href="mailto:fannydai@gmail.com">Yellow</a></li>
@@ -102,6 +143,10 @@
             <td>window</td>
         </tr>
     </table>
+
+    <div id="middle-block"></div>
+    <div id="bottom-left"></div>
+    <div id="bottom-right"></div>
 
 </body>
 </html>
